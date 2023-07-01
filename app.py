@@ -20,8 +20,8 @@ logging.basicConfig(filename='/tmp/myapp.log', level=logging.INFO)
 logging.info('lklakslkas')
 
 def get_vtotal(url):
-    #due to lack of time, the token is hard coded, in real life of course would be configuration"
-    v_token="6ff13ffbc41a6c8f2b76f2c008a2d8d3036e5529e647ed7bc309541ebee05fe9"
+    
+    v_token="xxx"
     with virustotal_python.Virustotal(v_token) as vtotal:
         try:
             resp = vtotal.request("urls", data={"url": url}, method="POST")
